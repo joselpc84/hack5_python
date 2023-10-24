@@ -8,7 +8,26 @@ text: ["a","b"] output => ["2","1"]
 """
 
 
-def fn_hack_8():
-    result = ["a","b","c","d","e"]
-    #...
+def fn_hack_8(result):
+    if(len(result) == 5):
+        result.reverse()
+        for i in range (len(result)):
+            result[i] = result[i] + "-" + f"{5-i}"
+            i+=1
+
+    if(len(result) == 3):
+        result.reverse()
+        for i in range (len(result)):
+            result[i] = result[i] + "-" + f"{3-i}"
+            i+=1
+
+    if(len(result) == 4):
+        for i in range (len(result)):
+            result[i] = f"{4-i}"
+            i+=1
+
+    if(len(result) == 2):
+        for i in range (len(result)):
+            result[i] = f"{2-i}"
+            i+=1
     return result

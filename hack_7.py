@@ -9,7 +9,13 @@ text: [] output => [0]
 """
 
 
-def fn_hack_7():
-    result = ["a","b","c","d","e"]
-    #...
+def fn_hack_7(result):
+    if(len(result) > 1):
+        for i in range(len(result)):
+            if result[i] == "a" or result[i] == "c" or result[i] == "e":
+                result[i] = f"{i+1}"
+            else:
+                result[i] = i+1
+    else:
+        result[0] = 0; 
     return result
